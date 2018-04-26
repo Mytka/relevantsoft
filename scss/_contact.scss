@@ -1,0 +1,99 @@
+.container {
+    max-width: 1225px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.contact-block {
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+      @include breakpoints(tablet){
+                    padding: 60px 0;
+                } 
+    &:before{
+        content: '';
+        background: url(../images/line.png) repeat-x;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        z-index: 5;
+    }
+    h2 {
+        font: 31px/1.2 'Raleway', sans-serif;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    h3 {
+        font: 31px/1.2 'Raleway', sans-serif;
+        margin: 0 0 60px;
+        text-transform: uppercase;
+    }
+    .form-wrapper {
+        &:after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        .form-block {
+            width: 50%;
+            display: inline-block;
+            float: left;
+            vertical-align: top;
+            padding: 0 15px;
+            @include breakpoints(tablet){
+                     width: 100%;
+                        float: none;
+                margin-bottom: 30px;
+                } 
+          
+            .form-control {
+                display: block;
+                width: 100%;
+                border: 1px solid #e1e1e1;
+                height: 50px;
+                margin: 0 0 10px;
+                padding: 10px 25px;
+            }
+            .btn-primary {
+                background: #1b7ce0;
+                border: 0;
+                border-radius: 5px;
+                color: #fff;
+                font: 16px/1.2 'Lora', sans-serif;
+                width: 100%;
+                height: 50px;
+            }
+            textarea {
+                border: 1px solid #e1e1e1;
+                width: 100%;
+                margin: 0 0 10px;
+                height: 210px;
+                padding: 20px 25px;
+                resize: none;
+            }
+        }
+        .map-block {
+            width: 50%;
+            display: inline-block;
+            float: left;
+            text-align: left;
+            padding: 0 15px;
+             @include breakpoints(tablet){
+                     width: 100%;
+                        float: none;
+                } 
+            .map {
+                width: 100%;
+                height: 200px;
+                background: #ccc;
+                margin: 0 0 50px;
+            }
+            p {
+                font: 14px/1.2 'Lora', sans-serif;
+                margin: 0 0 20px;
+            }
+        }
+    }
+}
